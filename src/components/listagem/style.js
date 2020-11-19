@@ -18,6 +18,12 @@ export const Header = styled.div`
     margin-bottom: 100px;
 `
 
+export const ContainerH = styled.div`
+    width: 65%;
+    display: flex;
+    justify-content: flex-end;
+`
+
 export const WHTBtn = styled.button`
     height: 50px;
     width: 200px;
@@ -26,7 +32,6 @@ export const WHTBtn = styled.button`
     border-radius: 5px;
     color: #0094CF;
     font-size: 16px;
-    margin-left: 56%;
     font-family: Signika;
     @media (max-width: 692px) {
         margin-left: 0;

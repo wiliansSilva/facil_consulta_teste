@@ -1,13 +1,19 @@
 import React from 'react'
-import {Container, Header, WHTBtn, ContainerItem, TextName, ContainerButtons, Button, ContainerHours, ContainerHoursDad, ContainerName, TextHours} from './style'
+import {Container, Header, WHTBtn, ContainerItem, TextName, ContainerButtons, Button, ContainerHours, ContainerHoursDad, ContainerName, TextHours, ContainerH} from './style'
 
 export default class Listagem extends React.Component{
+    
     render(){
+        
         return(
             <Container>
 
                 <Header>
-                    <WHTBtn>Cadatro do médico</WHTBtn>
+                    <ContainerH>
+                        <WHTBtn onClick={() => {
+                            window.location = '/Cadastro';
+                        }}>Cadatro do médico</WHTBtn>
+                    </ContainerH>
                 </Header>
                 <ContainerItem>
                     <ContainerName>
