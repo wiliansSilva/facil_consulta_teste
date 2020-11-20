@@ -46,6 +46,7 @@ export const WHTBtn = styled.button`
 export const ContainerItem = styled.div`
     width: 65%;
     height: 300px;
+    margin-bottom: 20px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -122,7 +123,7 @@ export const ContainerHoursDad = styled.div`
     margin-top: 50px;
     display:flex;
     justify-content: center;
-
+    flex-direction: row;
 `
 
 export const ContainerHours = styled.div`

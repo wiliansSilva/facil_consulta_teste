@@ -11,7 +11,7 @@ export default function Listagem(){
         const [isNameValid,setValidName] = useState(false)
         const [errorName,setErroName] = useState("")
 
-        const [password,setPassword] = useState("")
+        const [password,setPassword] = useState("000000")
         const [isPasswordValid,setValidPassword] = useState(false)
         const [errorPassword,setErrorPassword] = useState("")
 
@@ -38,7 +38,7 @@ export default function Listagem(){
 
         useEffect(() =>{
             if(password.length < 6){
-                setErrorPassword("Senha inválido!")
+                setErrorPassword("Senha inválida!")
                 setValidPassword(false)
             }else{
                 setErrorPassword("")
@@ -54,24 +54,26 @@ export default function Listagem(){
                 </Header>
                 <ContainerCadastro>
                     <Title>Cadastro de médico</Title>
-                    <ContainerInput>
+                    <ContainerInput method="POST" action="http://localhost/facil_consulta/facil_consulta_teste/api/cadastro/">
                         <Text>Nome</Text>
-                        <Input placeholder='Inisira o nome do profissional' onChange={e => setName(e.target.value)}/>
+                        <Input name="nome" id="nome" placeholder='Inisira o nome do profissional' onChange={e => setName(e.target.value)}/>
                         {errorName 
                             ?(<div style={{color: 'red'}}>{errorName}</div>)
                             : null}
                         <Text>Email</Text>
-                        <Input placeholder='exemplo@dominio.com.br' onChange={e => setEmail(e.target.value)}/>
+                        <Input name="email" placeholder='exemplo@dominio.com.br' onChange={e => setEmail(e.target.value)}/>
                         {errorEmail 
                             ?(<div style={{color: 'red'}}>{errorEmail}</div>)
                             : null}
                         <Text>Senha</Text>
-                        <Input placeholder='Escolha uma senha forte e segura' onChange={e => setPassword(e.target.value)}/>
+                        <Input name="senha" placeholder='Escolha uma senha forte e segura' onChange={e => setPassword(e.target.value)}/>
                         {errorPassword 
                             ?(<div style={{color: 'red'}}>{errorPassword}</div>)
                             : null}
+
+                        <Button type="submit" value="Realizar cadastro" placeholder="teste"/>
                     </ContainerInput>
-                    <Button onClick={() => console.log(email)}>Realizar cadastro</Button>
+                    
                     <TextUnder>Voltar para a Página inicial</TextUnder>
                 </ContainerCadastro>
             </Container>

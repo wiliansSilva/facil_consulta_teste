@@ -63,7 +63,7 @@ export const Title = styled.h2`
     color: #004768;
 `
 
-export const ContainerInput = styled.div`
+export const ContainerInput = styled.form`
     width: 100%;
     height: 50%;
     padding: 15px;
@@ -85,7 +85,7 @@ export const Input = styled.input`
     font-family: Signika;
 `
 
-export const Button = styled.button`
+export const Button = styled.input`
     cursor: pointer;
     width: 200px;
     height: 50px;
