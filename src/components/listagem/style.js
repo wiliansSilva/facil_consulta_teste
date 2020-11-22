@@ -142,6 +142,7 @@ export const ContainerHours = styled.div`
 `
 
 export const TextHours = styled.h4`
+    cursor: pointer;
     background-color: #0094CF;
     color: white;
     display: flex;
@@ -152,4 +153,9 @@ export const TextHours = styled.h4`
     width: 200px;
     height: 40px;
     font-family: Signika;
+
+    &:hover{
+        background-color: #004768;
+        color: white;
+    }
 `

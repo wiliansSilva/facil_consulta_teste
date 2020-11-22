@@ -1,6 +1,7 @@
 import React from 'react';
 import Listagem from './components/listagem/'
 import Cadastro from './components/cadastro'
+import Atualizar from './components/atualizar'
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
 
 const Routes = () => (
@@ -8,6 +9,7 @@ const Routes = () => (
         <Switch>
             <Route exact path="/" component={() => <Listagem/>}/>
             <Route exact path="/Cadastro" component={() => <Cadastro/>}/>
+            <Route exact path="/Editar" component={() => <Atualizar/>}/>
         </Switch>
     </BrowserRouter>
 );
