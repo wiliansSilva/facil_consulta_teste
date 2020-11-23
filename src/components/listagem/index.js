@@ -25,15 +25,29 @@ export default function Listagem() {
 
 
     function changeText(text) {
-        //inverte e faz um join na data e hora
-        const d1 = text.slice(7, 11)
-        const d2 = text.slice(12, 14)
-        const d3 = text.slice(15, 17)
+        
+        if(text.slice(2,4).replace('"',"").length == 1){
+            //inverte e faz um join na data e hora
+            const d1 = text.slice(7, 11)
+            const d2 = text.slice(12, 14)
+            const d3 = text.slice(15, 17)
 
-        const h1 = text.slice(18, 20)
-        const h2 = text.slice(20, 23)
-        const result = d3 + '/' + d2 + '/' + d1 + ' às ' + h1 + h2
-        return result;
+            const h1 = text.slice(18, 20)
+            const h2 = text.slice(20, 23)
+            const result = d3 + '/' + d2 + '/' + d1 + ' às ' + h1 + h2
+            return result;
+        }else{
+            //inverte e faz um join na data e hora
+            const d1 = text.slice(8, 12)
+            const d2 = text.slice(13, 15)
+            const d3 = text.slice(16, 18)
+
+            const h1 = text.slice(19, 20)
+            const h2 = text.slice(20, 24)
+            const result = d3 + '/' + d2 + '/' + d1 + ' às ' + h1 + h2
+            return result;
+        }
+        
     }
 
     return (
@@ -52,13 +66,15 @@ export default function Listagem() {
                         <ContainerName>
                             <TextName>{db[index].nome}</TextName>
                             <ContainerButtons>
-                                <Button onClick={() => {
-                                    
+                                <Button onClick={() => {                                    
                                     localStorage.setItem('id',db[index].id);
                                     localStorage.setItem('pass',db[index].senha);
                                     window.location = '/Editar'
                                 }}>Editar cadastro</Button>
-                                <Button>Configurar horarios</Button>
+                                <Button onClick={() =>{
+                                    localStorage.setItem('id',db[index].id);
+                                    window.location = '/Configurar_Horario'
+                                }}>Configurar horarios</Button>
                             </ContainerButtons>
                         </ContainerName>
 
@@ -77,7 +93,7 @@ export default function Listagem() {
                                                     url: "http://localhost/facil_consulta/facil_consulta_teste/api/updateHours/",
                                                     dataType: "json",
 
-                                                    data: {id: itemHour[2]},
+                                                    data: {id: itemHour.slice(2,4).replace('"'," ")},
                                                     success: function (response){
                                                         window.location.reload();
                                                     },
