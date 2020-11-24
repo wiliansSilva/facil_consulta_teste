@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Header, WHTBtn, ContainerItem, TextName, ContainerButtons, Button, ContainerHours, ContainerHoursDad, ContainerName, TextHours, ContainerH } from './style'
+import Header from '../header_comp'
+import { Container, ContainerItem, TextName, ContainerButtons, Button, ContainerHours, ContainerHoursDad, ContainerName, TextHours, ContainerH } from './style'
 import $ from "jquery"
 
 export default function Listagem() {
@@ -53,13 +54,7 @@ export default function Listagem() {
     return (
         <Container>
 
-            <Header>
-                <ContainerH>
-                    <WHTBtn onClick={() => {
-                        window.location = '/Cadastro';
-                    }}>Cadatro do médico</WHTBtn>
-                </ContainerH>
-            </Header>
+           <Header/>
             {db.map((items, index) => {
                 return (
                     <ContainerItem key={index}>

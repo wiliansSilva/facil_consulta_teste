@@ -8,36 +8,6 @@ export const Container = styled.div`
     align-items: center;
 `
 
-export const Header = styled.div`
-    height: 80px;
-    width: 100%;
-    background-color: #0094CF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 100px;
-`
-
-export const WHTBtn = styled.button`
-    height: 50px;
-    width: 200px;
-    background-color: white;
-    border: 0;
-    border-radius: 5px;
-    color: #0094CF;
-    font-size: 16px;
-    margin-left: 56%;
-    font-family: Signika;
-    @media (max-width: 692px) {
-        margin-left: 0;
-    }
-
-    &:hover{
-        background-color: #004768;
-        color: white;
-    }
-`
-
 export const ContainerCadastro = styled.div`
     width: 42%;
     height: 500px;
@@ -105,4 +75,11 @@ export const TextUnder = styled.h4`
     text-decoration: underline;
     font-family: Signika;
     color: #0094CF;
+`
+
+export const ContainerCenter = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `

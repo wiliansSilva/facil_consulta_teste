@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react'
-import {Container, Header, WHTBtn, ContainerCadastro, Title, ContainerInput, Text, Input, Button, TextUnder} from './style'
+import {Container, Header, WHTBtn, ContainerCadastro, Title, ContainerInput, Text, Input, Button, TextUnder, ContainerCenter} from './style'
 
 export default function Listagem(){
     
@@ -70,11 +70,16 @@ export default function Listagem(){
                         {errorPassword 
                             ?(<div style={{color: 'red'}}>{errorPassword}</div>)
                             : null}
-
-                        <Button type="submit" value="Realizar cadastro" placeholder="teste"/>
+                        <ContainerCenter>
+                            <Button type="submit" value="Realizar cadastro" placeholder="teste"/>
+                            <TextUnder onClick={() => {
+                                window.location = '/';
+                            }}>Voltar para a Página inicial</TextUnder>
+                        </ContainerCenter>
+                        
                     </ContainerInput>
                     
-                    <TextUnder>Voltar para a Página inicial</TextUnder>
+                    
                 </ContainerCadastro>
             </Container>
         );

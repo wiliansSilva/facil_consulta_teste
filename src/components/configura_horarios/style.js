@@ -8,36 +8,6 @@ export const Container = styled.div`
     align-items: center;
 `
 
-export const Header = styled.div`
-    height: 80px;
-    width: 100%;
-    background-color: #0094CF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 100px;
-`
-
-export const WHTBtn = styled.button`
-    height: 50px;
-    width: 200px;
-    background-color: white;
-    border: 0;
-    border-radius: 5px;
-    color: #0094CF;
-    font-size: 16px;
-    margin-left: 56%;
-    font-family: Signika;
-    @media (max-width: 692px) {
-        margin-left: 0;
-    }
-
-    &:hover{
-        background-color: #004768;
-        color: white;
-    }
-`
-
 export const ContainerDivs = styled.div`
     width: 70%;
     height: 500px;
@@ -46,7 +16,10 @@ export const ContainerDivs = styled.div`
     flex-direction: row;
     
     @media (max-width: 1180px) {
-        height: 450px
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
     }
 
     @media (max-width: 668px) {
@@ -65,6 +38,10 @@ export const ContainerAdd = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 612px) {
+        width: 80%;
+    }
 `
 export const ContainerConfig = styled.div`
     width: 49%;
@@ -73,6 +50,14 @@ export const ContainerConfig = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 1180px) {
+        margin-top: 50px;
+    }
+
+    @media (max-width: 612px) {
+        width: 80%;
+    }
 `
 
 export const Title = styled.h2`
@@ -81,6 +66,10 @@ export const Title = styled.h2`
     font-weight: bold;
     font-family: Signika;
     color: #004768;
+
+    @media (max-width: 1180px) {
+        text-align: center;
+    }
 `
 
 export const Text = styled.h3`

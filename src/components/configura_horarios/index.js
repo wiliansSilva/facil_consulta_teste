@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import InputMask from 'react-input-mask';
+import Header from '../header_comp'
 import $ from "jquery"
-import { Container, Header, WHTBtn, ContainerDivs, ContainerAdd, ContainerConfig, Text, TextT,Title, ContainerText, ContainerInput, Button, TextUnder, ContainerTextHours, Textremove, Divider} from './style'
+import { Container, ContainerDivs, ContainerAdd, ContainerConfig, Text, TextT,Title, ContainerText, ContainerInput, Button, TextUnder, ContainerTextHours, Textremove, Divider} from './style'
 
 export default function ConfiguraHorario() {
 
@@ -38,9 +39,7 @@ export default function ConfiguraHorario() {
     return (
         <Container>
 
-            <Header>
-                <WHTBtn>Cadatro do médico</WHTBtn>
-            </Header>
+            <Header/>
             <ContainerDivs>
                 <ContainerAdd>
                     <Title>Adicionar horários</Title>
@@ -72,7 +71,9 @@ export default function ConfiguraHorario() {
                             }
                         });
                     }}>Adicionar horário</Button>
-                    <TextUnder>Voltar para a página principal</TextUnder>
+                    <TextUnder onClick={() => {
+                        window.location = '/'
+                    }}>Voltar para a página principal</TextUnder>
                 </ContainerAdd>
 
                 <ContainerConfig>

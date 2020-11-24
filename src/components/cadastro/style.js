@@ -106,3 +106,10 @@ export const TextUnder = styled.h4`
     font-family: Signika;
     color: #0094CF;
 `
+
+export const ContainerCenter = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`

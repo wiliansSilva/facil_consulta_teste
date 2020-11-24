@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react'
-import {Container, Header, WHTBtn, ContainerCadastro, Title, ContainerInput, Text, Input, Button, TextUnder} from './style'
+import Header from '../header_comp'
+import {Container, ContainerCadastro, Title, ContainerInput, Text, Input, Button, TextUnder, ContainerCenter} from './style'
 
 export default function Atualizar(){
         const [id,setId] = useState(0);
@@ -55,9 +56,7 @@ export default function Atualizar(){
         return(
             <Container>
 
-                <Header>
-                    <WHTBtn>Cadatro do médico</WHTBtn>
-                </Header>
+                <Header/>
                 <ContainerCadastro>
                     <Title>Editar médico</Title>
                     <ContainerInput method="POST" action="http://localhost/facil_consulta/facil_consulta_teste/api/atualizaMedico/">
@@ -78,10 +77,15 @@ export default function Atualizar(){
                             : null}
                         <Input type='hidden' name='clientId' value={id}/>
                         <Input type='hidden' name='clientPass' value={pas}/>
-                        <Button type="submit" value="Atualizar cadastro" placeholder="teste"/>
+                        
+
+                        <ContainerCenter>
+                            <Button type="submit" value="Atualizar cadastro" placeholder="teste"/>
+                            <TextUnder onClick={() => {
+                                window.location = '/';
+                            }}>Voltar para a Página inicial</TextUnder>
+                        </ContainerCenter>
                     </ContainerInput>
-                    
-                    <TextUnder>Voltar para a Página inicial</TextUnder>
                 </ContainerCadastro>
             </Container>
         );
