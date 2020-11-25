@@ -10,7 +10,7 @@ export const Container = styled.div`
 
 export const ContainerDivs = styled.div`
     width: 70%;
-    height: 500px;
+    height: 100%;
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
@@ -45,7 +45,7 @@ export const ContainerAdd = styled.div`
 `
 export const ContainerConfig = styled.div`
     width: 49%;
-    height: 80%;
+    height: 100%;
     background-color: white;
     display: flex;
     flex-direction: column;

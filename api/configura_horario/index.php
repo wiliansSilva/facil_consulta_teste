@@ -5,8 +5,8 @@
     
     $pdo = new PDO("mysql:host=localhost;dbname=facil_consulta","wilians","12345678");
             
-    //$sql = "SELECT * FROM `horario` INNER JOIN medico ON medico.id = horario.id_medico WHERE id_medico = $id_medico";
-    $sql = "SELECT * FROM medico LEFT JOIN horario ON horario.id_medico = medico.id WHERE id_medico = 2";
+   
+    $sql = "SELECT * FROM medico LEFT JOIN horario ON horario.id_medico = medico.id WHERE id_medico = $id_medico";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 

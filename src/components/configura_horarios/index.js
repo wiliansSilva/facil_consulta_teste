@@ -11,6 +11,7 @@ export default function ConfiguraHorario() {
     const [id,setId] = useState('');
 
     useEffect(() => {
+        console.log(localStorage.getItem('id'))
         setId(localStorage.getItem('id'))
         $.ajax({
             type: "POST",
@@ -64,7 +65,7 @@ export default function ConfiguraHorario() {
                 
                             data: {data: formated,id: id},
                             success: function (response){                                                        
-                                console.log(response)
+                                window.location = '/'
                             },
                             error: function(response){
                                 console.log(response)
