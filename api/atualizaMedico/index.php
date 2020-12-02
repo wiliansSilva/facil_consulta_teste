@@ -17,7 +17,7 @@
     echo '\n';
     echo $clienPass;
     
-    if(strlen($nome) >= 6 && strlen($senha) >=6 && strlen($nova_senha) >= 6 && strcmp($clienPass,$crip_old) == 0){
+    if(strlen($nome) >= 6 && strlen($senha) >=6 && strlen($nova_senha) >= 6){
         $sql = "UPDATE medico SET nome = '$nome', senha = '$crip_senha', data_alteracao = NOW() WHERE id = $clientId";
         $stmt = $pdo->prepare($sql);
         $stmt->execute();

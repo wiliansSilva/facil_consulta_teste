@@ -46,7 +46,7 @@ export default function ConfiguraHorario() {
                     <Title>Adicionar horários</Title>
                     <ContainerText>
                         <Text>Nome:</Text>
-                        {hours ? (<TextT>{hours[0].nome}</TextT>) : null}
+                        {hours == '' ?  null : (<TextT>{hours[0].nome}</TextT>)}
                         <Text>Data</Text>
                         <ContainerInput>
                             <InputMask style={{width: '100%',height: 30}} mask="99/99/9999 99:99" type="data" placeholder="dd-mm-yyyy hh:mm" onChange={e => setData(e.target.value)}/>
